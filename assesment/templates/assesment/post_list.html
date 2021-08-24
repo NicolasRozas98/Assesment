@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <title>Giant assesment</title>
+</head>
+<body>
+
+<h2>HTML Tabla </h2></a>
+<a href="/create">Ir al creation form</a>
+<a href="/admin">Ir al Admin</a>
+<body>
+    <table id="customers">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Location</th> 
+          <th>Email</th>
+        </tr>
+{% for data in collected_data %}
+
+
+      <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.type}}</td>
+        <td>{{data.location}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+{% endfor %}
+
+</table>
+<h2>Argentinos</h2>
+<body>
+    <table id="customers">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Location</th> 
+          <th>Email</th>
+          <th>Contents</th>
+        </tr>
+{% for data in data_filter %}
+
+
+      <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.type}}</td>
+        <td>{{data.location}}</td>
+        <td>{{data.email}}</td>
+        <td>{{data.content}}</td>
+      </tr>
+{% endfor %}
+
+</table>
+<h2>Groenlandia</h2>
+<body>
+    <table id="customers">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Location</th> 
+          <th>Email</th>
+        </tr>
+{% for data in data_locate %}
+
+
+      <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.type}}</td>
+        <td>{{data.location}}</td>
+        <td>{{data.email}}</td>
+      </tr>
+      
+{% endfor %}
+
+</table>
+</body>
+</html>

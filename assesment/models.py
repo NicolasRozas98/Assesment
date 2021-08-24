@@ -3,11 +3,13 @@ from django.db import models
 
 class DataCollected(models.Model):
     BOOK_CHOICES = (
-        ("General Enquiry", "General Enerquy"),
-        ("Request A Call Back", "Request A Call Back"),
-        ("Customer Service Enquiry", "Customer Service Enquiry"),
+        ("general_enquiry", "General Enerquy"),
+        ("request_a_call_back", "Request A Call Back"),
+        ("customer_service_enquiry", "Customer Service Enquiry"),
     )
     type = models.CharField(max_length= 100, choices= BOOK_CHOICES)
-
-    name = models.TextField(max_length=64, null=True)
-    location = models.TextField(max_length=64, null=True)
+    name = models.CharField(max_length=64, default="")
+    content = models.TextField(max_length=500, null=True)
+    location = models.CharField(max_length=64, default="")
+    email = models.EmailField(max_length=254, default="")
+    

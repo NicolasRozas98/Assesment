@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    <title>Creacion del form</title>
+</head>
+<body>
+    <form method="POST" class= formu>
+        {% csrf_token %}
+        <input type="text" placeholder="Name" name="name">
+        <input type="email" placeholder="Email" name="email">
+        <input type="content" placeholder="Content" name="content">
+        <select name="type">
+            <option value="General Enquiryyy">General Enquiry</option>
+            <option value="Request A Call Back">Request A  Call Back</option>
+            <option value="Customer Service Enquiry">Customer Service Enquiry</option>
+        </select>
+    
+        <input type="text" placeholder="Location" name="location">
+        <button type="submit">CREAME</button>
+    </form>
+    
+</body>
+</html>
