@@ -1,27 +1,54 @@
-#customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
+    height: 100vh;
   }
   
-#customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
+  form {
+    border-radius: 20px;
+    width: 500px;
+    height: 650px;
+    border: 1px solid #e4e4e4;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
-  
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-#customers tr:hover {background-color: #ddd;}
-  
-#customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
+  input,select {
+    width: 70%;
+    border: 1px solid #d7d7d7;
+    height: 4rem;
+    background-color: white;
+    font-size: 16px; 
+  }
+  button {
+    background: rgba(32,114,237,0.69);
     color: white;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    border-radius: 8px;
+    border: none;
+    text-transform: uppercase;
+    padding: .5rem;
+    float: right;
+    width: 85px;
   }
-
-.formu{
-    background-color: red;
-    text-align: center;
-}
+  
+  input::placeholder {
+    color: #c6c6c6;
+    font-size: 15px;
+    padding-left: 5px;
+  }
+  .button-container {
+    display:flex;
+    justify-content: flex-end;
+    width: 70%;
+  }
+  
+  .content-imput {
+    height: 138px;
+  }

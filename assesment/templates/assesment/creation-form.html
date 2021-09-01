@@ -4,25 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% load staticfiles %}
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
-    <title>Creacion del form</title>
+    <title>Data Form</title>
 </head>
 <body>
-    <form method="POST" class= formu>
-        {% csrf_token %}
-        <input type="text" placeholder="Name" name="name">
-        <input type="email" placeholder="Email" name="email">
-        <input type="content" placeholder="Content" name="content">
-        <select name="type">
-            <option value="General Enquiryyy">General Enquiry</option>
-            <option value="Request A Call Back">Request A  Call Back</option>
-            <option value="Customer Service Enquiry">Customer Service Enquiry</option>
-        </select>
+    <div class="form-container">
+        <form method="POST" class=formu>
+            {% csrf_token %}
+            <h1>Sending Email </h1>
     
-        <input type="text" placeholder="Location" name="location">
-        <button type="submit">CREAME</button>
-    </form>
+            <input type="text"Required placeholder="Name" name="name">
+            <input type="email"Required placeholder="Email" name="email">
+            <input type="location"Required placeholder="Location" name="location">
+            <select name="type_choice" Required>
+                <option value="" selected disabled hidden>Please select an option</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Request A Call Back">Request A Call Back</option>
+                <option value="Customer Service Enquiry">Customer Service Enquiry</option>
+            </select>
+            <input type="text"Required placeholder="Content"name ="content" class="content-imput">
+            
+            <div class = "button-container">
+                <button> Send</button>
+            </div>
+            
+        </form>
+    </div>
     
 </body>
 </html>
