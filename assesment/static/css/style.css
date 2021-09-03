@@ -52,3 +52,10 @@
   .content-imput {
     height: 138px;
   }
+
+  .sendemail {
+    position: fixed !important; /* I had to add the! IMPORTANT because there is another default position that broke my position*/
+    bottom: 20px;
+    right: 20px;
+    width: 20rem;
+  }
