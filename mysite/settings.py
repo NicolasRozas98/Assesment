@@ -125,10 +125,10 @@ STATICFILES_DIRS =(os.path.join(BASE_DIR,'static'),)
 
 #Email Sending
 
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"  # To eliminate that it is shown in the console, change the "Console" For an smtp
 EMAIL_HOST= 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'nicolasrozas22@gmail.com' 
-EMAIL_HOST_PASSWORD = 'TestAccount123' # I know this is not well at all, there is another way to do this (settings.ini or enviornment Variables)
+EMAIL_HOST_PASSWORD = 'Tamara41161316' # I know this is not well at all, there is another way to do this (settings.ini or enviornment Variables)
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False

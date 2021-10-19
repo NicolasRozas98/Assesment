@@ -37,7 +37,12 @@
     float: right;
     width: 85px;
   }
-  
+  textarea{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 110px;
+    width: 350px;
+  }
   input::placeholder {
     color: #c6c6c6;
     font-size: 15px;
@@ -47,6 +52,10 @@
     display:flex;
     justify-content: flex-end;
     width: 70%;
+    height: 38px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
   }
   
   .content-imput {

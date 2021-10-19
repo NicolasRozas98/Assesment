@@ -3,6 +3,7 @@ from django.urls import path
 from . import views
 
 
+
 urlpatterns = [
-    path('',views.create_colleted_data, name='send'),
+    path('',views.DataFormView.as_view(), name='send'),
 ]
